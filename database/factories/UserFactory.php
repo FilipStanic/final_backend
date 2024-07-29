@@ -24,10 +24,11 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => '',
-            'email' => '',
+            'name' => null,
+            'email' => null,
             'email_verified_at' => null,
-            'password' => ''
+            'password' => null,
+            'role' => null,
         ];
     }
 
