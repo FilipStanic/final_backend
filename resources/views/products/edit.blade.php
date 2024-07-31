@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mx-auto p-4">
         <h1 class="text-3xl font-bold mb-6">Edit Photography Product</h1>
-        <form action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data" class="bg-gradient-to-r from-orange-100 to-white p-6 rounded-lg shadow-md">
+        <form action="{{ route('products.update', $product->id) }}" method="POST" enctype="multipart/form-data" class="bg-gradient-to-r from-orange-300 to-gray-100 p-6 rounded-lg shadow-md">
             @csrf
             @method('PUT')
             <div class="mb-4">
@@ -37,6 +37,15 @@
             </div>
             <button type="submit" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded">Update</button>
         </form>
-        <a href="{{ route('products.index') }}" class="inline-block mt-4 text-blue-500 hover:underline">Back to List</a>
+        <div>
+            <a href="{{ route('products.index') }}">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left absolute" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M5 12l14 0" />
+                    <path d="M5 12l6 6" />
+                    <path d="M5 12l6 -6" />
+                </svg>
+            </a>
+        </div>
     </div>
 @endsection

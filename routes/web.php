@@ -19,9 +19,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('products', ProductController::class);
-
-
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::resource('products', ProductController::class);
+});
 
 
 

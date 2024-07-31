@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-gradient-to-r from-indigo-400 to-gray-600">
+    <body class="bg-gradient-to-r from-indigo-300 to-gray-100">
     @yield('content')
     </body>
 </html>

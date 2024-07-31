@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,6 +20,8 @@ class DatabaseSeeder extends Seeder
 
 //        \App\Models\User::factory(10)->create();
 //        \App\Models\Product::factory()->count(10)->create();
+          User::factory()->admin()->create();
+
 
 
     }
