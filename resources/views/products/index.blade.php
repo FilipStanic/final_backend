@@ -1,18 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mx-auto">
-        <header class="w-full bg-blue-950">
-            <div class="flex flex-col items-center justify-center max-w-xl mx-auto text-center mb-6 p-4">
-                <h1 class="text-3xl text-white font-bold mb-4">Photos - Admin View</h1>
-            </div>
-        </header>
+    <div class="container mt-4">
 
         <a href="{{ route('products.create') }}" class="text-white bg-blue-600 hover:bg-blue-500 rounded px-4 py-2 ml-4">
             Create New Product
         </a>
 
-        <div class="grid grid-cols-3 gap-4 p-4">
+        <div class="grid grid-cols-3 gap-4 p-4 mt-4">
             @foreach ($products as $product)
                 <div class="bg-white p-4 rounded-lg shadow">
                     <h2 class="text-xl font-semibold text-center">{{ $product->title }}</h2>

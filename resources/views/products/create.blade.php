@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container mx-auto p-6">
-    <div class="flex flex-col items-center justify-center bg-gradient-to-r from-orange-300 to-orange-100 p-8 rounded-lg shadow-md w-11/12 max-w-md mx-auto">
+    <div class="flex flex-col items-center justify-center bg-indigo-300 p-8 rounded-lg shadow-md w-11/12 max-w-md mx-auto">
 
     <h1 class="text-3xl font-bold mb-6 text-gray-800 text-center">Create Photography Product</h1>
 

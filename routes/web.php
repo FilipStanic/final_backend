@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Middleware\AdminMiddleware;
 
 
 Route::get('/', function () {
@@ -19,10 +20,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', 'admin'])->group(function () {
+Route::middleware(['auth', AdminMiddleware::class])->group(function () {
     Route::resource('products', ProductController::class);
 });
-
 
 
 require __DIR__.'/auth.php';
